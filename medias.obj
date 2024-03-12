@@ -1,0 +1,16 @@
+[
+{
+encapsulation:0,
+mimeType:"text/css",
+name:"custom_servoy_theme_properties_impuestos.less",
+typeid:37,
+uuid:"B899CF5B-D88F-47AC-8CD4-E2E03CB80DCE"
+},
+{
+encapsulation:0,
+mimeType:"text/css",
+name:"LG_Impuestos.less",
+typeid:37,
+uuid:"E7398882-9555-45FC-A29A-9BB4B2FD49D3"
+}
+]

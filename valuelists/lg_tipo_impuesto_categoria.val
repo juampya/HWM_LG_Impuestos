@@ -1,0 +1,9 @@
+addEmptyValue:1,
+customValues:"Otros|0\r\
+Percepción|1\r\
+Retención|2",
+displayValueType:12,
+name:"lg_tipo_impuesto_categoria",
+realValueType:4,
+typeid:34,
+uuid:"D0797E51-A1B0-464E-8ED4-1B6A3F3DF45D"

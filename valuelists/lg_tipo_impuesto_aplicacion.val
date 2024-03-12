@@ -1,0 +1,8 @@
+customValues:"Nacional|0\r\
+Provincial|1\r\
+Municipal|2",
+displayValueType:12,
+name:"lg_tipo_impuesto_aplicacion",
+realValueType:4,
+typeid:34,
+uuid:"8A3C062D-B20F-4781-A795-1D035B24DF31"

@@ -1,0 +1,11 @@
+addEmptyValue:1,
+customValues:"Retenc. IVA|RIV\r\r\
+Retenc. GANANCIAS|RGA\r\r\
+Retenc. Ing.BRUTOS|RIB\r\r\
+Percep. IVA|PIV\r\r\
+Percep. Ing.BRUTOS|PIB",
+displayValueType:12,
+name:"lg_tipo_impuesto_comprob",
+realValueType:12,
+typeid:34,
+uuid:"5CF77177-1D07-46C6-923E-5D9820C6B4CA"

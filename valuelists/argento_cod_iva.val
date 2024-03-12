@@ -1,0 +1,12 @@
+addEmptyValue:1,
+customValues:"RI|'01'\r\
+RNI|'02'\r\
+NR|'03'\r\
+EX|'04'\r\
+CF|'05'\r\
+RM|'06'",
+displayValueType:12,
+name:"argento_cod_iva",
+realValueType:12,
+typeid:34,
+uuid:"EF9A88FF-8154-4780-BD5B-E7161788F8DF"

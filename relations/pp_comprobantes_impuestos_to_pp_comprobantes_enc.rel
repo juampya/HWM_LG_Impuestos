@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/sistemas/pp_comprobantes_enc",
+items:[
+{foreignColumnName:"comp_id",primaryDataProviderID:"comp_id",typeid:23,uuid:"71F1A6FC-513D-4E0C-A49E-6DE8DF039C8A"}
+],
+joinType:1,
+name:"pp_comprobantes_impuestos_to_pp_comprobantes_enc",
+primaryDataSource:"db:/sistemas/pp_comprobantes_impuestos",
+typeid:22,
+uuid:"5BF9EA07-49F1-4886-BA02-FA0DD37CD07A"

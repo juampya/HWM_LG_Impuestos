@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/sistemas/sucursales",
+items:[
+{foreignColumnName:"suc_id",primaryDataProviderID:"suc_id",typeid:23,uuid:"DFF0CCA5-A7B4-46D6-B406-EAD858111DCE"}
+],
+joinType:1,
+name:"pp_comprobantes_impuestos_to_sucursales",
+primaryDataSource:"db:/sistemas/pp_comprobantes_impuestos",
+typeid:22,
+uuid:"8C1F0065-A782-414E-A867-E8A977034CEF"
