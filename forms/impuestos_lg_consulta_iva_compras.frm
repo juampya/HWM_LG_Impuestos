@@ -563,10 +563,10 @@ top:"43",
 width:"220"
 },
 formIndex:2,
-imageStyleClass:"fas fa-bezier-curve",
-onActionMethodID:"4FD3C8E4-FB73-4217-90DA-4B673CCA0B97",
-text:"Asientos contables",
-toolTipText:"Asientos contables"
+imageStyleClass:"fas fa-balance-scale-left",
+onActionMethodID:"D6FC8CF0-D505-4793-B150-6D6C4F4C1432",
+text:"Asiento resumen",
+toolTipText:"Asiento resumen"
 },
 name:"btn_asientos",
 typeName:"bootstrapcomponents-button",
@@ -1186,6 +1186,14 @@ headerTitle:"Sucursal",
 svyUUID:"11BB2B4E-EC5D-49ED-B1EB-C98ECBC28EE2",
 valuelist:"0843E215-57E6-4634-8982-D5110EAA6163",
 width:150
+},
+{
+autoResize:false,
+dataprovider:"pp_comprobantes_enc_to_ctb_asientos_enc.asiento_numero",
+headerTitle:"Minuta",
+styleClass:"table_field_noBorder_center",
+svyUUID:"A9FFD0F2-8889-4919-A2F9-41BCAB2037D4",
+width:150
 }
 ],
 cssPosition:{
@@ -1195,7 +1203,8 @@ left:"0",
 right:"0",
 top:"129",
 width:"200"
-}
+},
+onCellDoubleClick:"86B5EF6F-30A2-483F-8A38-D9DC2F6ADF5F"
 },
 name:"groupingtable_1",
 typeName:"aggrid-groupingtable",

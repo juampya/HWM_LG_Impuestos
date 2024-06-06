@@ -665,6 +665,14 @@ dataprovider:"vc_fact_enc_to_vc_clientes.vc_clientes_to_localidades.localidades_
 headerTitle:"Provincia",
 svyUUID:"D567F97E-1B6F-4B90-9872-380AA7BCA482",
 width:250
+},
+{
+autoResize:false,
+dataprovider:"vc_fact_enc_to_ctb_asientos_enc.asiento_numero",
+headerTitle:"Minuta",
+styleClass:"table_field_noBorder_center",
+svyUUID:"4AA63D24-2746-42BD-AB80-6906B0F5C5CC",
+width:150
 }
 ],
 cssPosition:{
@@ -674,7 +682,8 @@ left:"0",
 right:"0",
 top:"126",
 width:"200"
-}
+},
+onCellDoubleClick:"80868344-E98C-40E6-8EAE-F8C3089CE820"
 },
 name:"groupingtable_3",
 typeName:"aggrid-groupingtable",
@@ -975,10 +984,10 @@ top:"41",
 width:"220"
 },
 formIndex:2,
-imageStyleClass:"fas fa-bezier-curve",
-onActionMethodID:"2F084961-3F24-4D05-9571-154E8A1A123E",
-text:"Asientos contables",
-toolTipText:"Asientos contables"
+imageStyleClass:"fas fa-balance-scale-left",
+onActionMethodID:"3E08D8BE-8129-4CFF-BE30-39B4ACA0F065",
+text:"Asiento resumen",
+toolTipText:"Asiento resumen"
 },
 name:"btn_asientos",
 typeName:"bootstrapcomponents-button",

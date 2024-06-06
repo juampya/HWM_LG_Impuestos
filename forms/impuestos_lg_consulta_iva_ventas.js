@@ -1,4 +1,10 @@
 /**
+ * @type {Array}
+ * @properties={typeid:35,uuid:"3B92C332-B862-483A-863C-AE0EDF0D2ABF",variableType:-4}
+ */
+var vl_asientos = null;
+
+/**
  * @type {Number}
  *
  * @properties={typeid:35,uuid:"0987E94A-703D-47A1-83CF-67667C6FCBDC",variableType:4}
@@ -48,7 +54,8 @@ function onActionVolver(event) {
  *
  * @properties={typeid:24,uuid:"F6E21D38-7E09-4B84-B6AE-61447779B1E1"}
  */
-function onActionRefrescar(event) {
+function onActionRefrescar(event) 
+{
 	vl_cliente = null
 	vl_mes	   = null
 	
@@ -214,15 +221,27 @@ function ExportarResumida()
 function onActionFiltrar() {
 	scopes.globals.PantallaWait()
 
+	vl_asientos = new Array
+	
 	controller.find()
 	facte_fecha = utils.dateFormat(vl_fec_desde,'dd-MM-yyyy')+'...'+utils.dateFormat(vl_fec_hasta,'dd-MM-yyyy')
 	if(vl_cliente!=null) cliente_id=vl_cliente
 	if(vl_mes!=null) facte_imputacion_mes=vl_mes
 	if(vl_anio!=null) facte_imputacion_anio=vl_anio
 	vc_fact_enc_to_lg_talonarios.talonario_libro_iva = 1
-	controller.search() 
+	var tmp_cant = controller.search() 
 
 	databaseManager.refreshRecordFromDatabase(foundset,-1)
+	
+	for (var i = 1; i <= tmp_cant; i++) 
+	{
+		var record = foundset.getRecord(i);
+		
+		if(!scopes.globals.EMPTY(record.asiento_id))
+		{
+			vl_asientos.push(record.asiento_id)
+		}
+	}
 	scopes.globals.CerrarPantallaWait()
 }
 
@@ -930,5 +949,55 @@ function ExportarDetallado()
 	{
 		scopes.globals.CerrarPantallaWait()
 		globals.VentanaGenerica(scopes.globals.mx_usuario_id,scopes.globals.vg_titulo_popup_dialog, 'Error al exportar a Excel: '+e, 'error', controller.getName(),null,null,null,null,null,null,null,null)
+	}
+}
+/**
+ * @param {JSEvent} event
+ *
+ * @properties={typeid:24,uuid:"3E08D8BE-8129-4CFF-BE30-39B4ACA0F065"}
+ */
+function onActionAsientosResumidos(event) 
+{
+	forms.impuestos_lg_totales_asientos.vl_asientos 	= vl_asientos
+	forms.impuestos_lg_totales_asientos.vl_mes 			= vl_mes
+	forms.impuestos_lg_totales_asientos.vl_anio 		= vl_anio
+	forms.impuestos_lg_totales_asientos.vl_fec_desde 	= vl_fec_desde
+	forms.impuestos_lg_totales_asientos.vl_fec_hasta 	= vl_fec_hasta
+	forms.impuestos_lg_totales_asientos.vl_tipo 		= 0
+	forms.impuestos_lg_totales_asientos.vl_titulo 		= 'ventas'
+	forms.impuestos_lg_totales_asientos.vl_total_debe  	= 0
+	forms.impuestos_lg_totales_asientos.vl_total_haber 	= 0
+	forms.impuestos_lg_totales_asientos.vl_diferencia  	= 0
+	
+	var w3 = application.createWindow("totales_x_asientos", JSWindow.MODAL_DIALOG);
+	w3.title=scopes.globals.vg_titulo_popup_dialog
+	forms.impuestos_lg_totales_asientos.controller.show(w3);
+}
+
+/**
+ * Called when the mouse is clicked on a row/cell (foundset and column indexes are given).
+ * the foundsetindex is always -1 when there are grouped rows
+ *
+ * @param {number} foundsetindex
+ * @param {number} [columnindex]
+ * @param {JSRecord} [record]
+ * @param {JSEvent} [event]
+ *
+ * @properties={typeid:24,uuid:"80868344-E98C-40E6-8EAE-F8C3089CE820"}
+ */
+function onCellDoubleClick(foundsetindex, columnindex, record, event) 
+{
+	switch (columnindex) 
+	{
+		case 20:
+			if(!scopes.globals.EMPTY(asiento_id))
+			{	
+				forms.lg_frm_asiento.elements.lbl_titulo.text = "Asiento contable"
+				forms.lg_frm_asiento.vl_asiento_id=asiento_id
+				var w3 = application.createWindow("mydialog", JSWindow.MODAL_DIALOG);
+				w3.title=scopes.globals.vg_titulo_popup_dialog
+				forms.lg_frm_asiento.controller.show(w3);
+			}
+		break;
 	}
 }
