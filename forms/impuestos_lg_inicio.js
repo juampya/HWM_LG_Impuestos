@@ -232,3 +232,16 @@ function onActionParametros()
 	w3.title=scopes.globals.vg_titulo_popup_dialog
 	forms.impuestos_lg_parametros.controller.show(w3);
 }
+
+/**
+ * @properties={typeid:24,uuid:"2903D97F-C742-4EB2-ACCD-A2FE2158CE1A"}
+ */
+function onActionConsulta_IVAaPagar() 
+{
+	databaseManager.revertEditedRecords()
+	//scopes.globals.AbrirGenerico(forms.impuestos_lg_consulta_percepciones.controller.getName())
+	
+	var w3 = application.createWindow("ivaapagar", JSWindow.MODAL_DIALOG);
+	w3.title=scopes.globals.vg_titulo_popup_dialog
+	forms.impuestos_lg_consulta_iva_apagar.controller.show(w3);
+}
