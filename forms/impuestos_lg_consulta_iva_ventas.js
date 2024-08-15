@@ -427,10 +427,10 @@ function onActionDescargar()
 						tmp_item_imp_neto = tmp_item_imp_neto + Math.abs(rec_item.facti_sb)
 						tmp_item_imp_insc = tmp_item_imp_insc + Math.abs(rec_item.facti_iva)
 						
-						if(j==1)
-						{	
-							tmp_alicuotas++
-						}	
+//						if(j==1)
+//						{	
+//							tmp_alicuotas++
+//						}	
 					}
 				}
 				
@@ -443,6 +443,8 @@ function onActionDescargar()
 					tmp_item_insc = tmp_item_insc.substr(0,13)+tmp_item_insc.substr(14,15)
 			
 					textData_alic = textData_alic +tmp_tipo_comp+tmp_ptovta+tmp_nrocompd+tmp_item_neto+tmp_cod_alic+tmp_item_insc+'\n'
+					
+					tmp_alicuotas++
 				}	
 			}
 			
