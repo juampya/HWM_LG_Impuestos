@@ -1,4 +1,18 @@
 /**
+ * @type {Number}
+ *
+ * @properties={typeid:35,uuid:"4BC7656E-D020-4066-B644-95FDE198F955",variableType:4}
+ */
+var vl_numero = null;
+
+/**
+ * @type {Number}
+ *
+ * @properties={typeid:35,uuid:"68E23EC2-1BD6-4259-90B4-A2CDB8992FEA",variableType:8}
+ */
+var vl_ptovta = null;
+
+/**
  * @type {Array}
  * @properties={typeid:35,uuid:"3B92C332-B862-483A-863C-AE0EDF0D2ABF",variableType:-4}
  */
@@ -56,9 +70,6 @@ function onActionVolver(event) {
  */
 function onActionRefrescar(event) 
 {
-	vl_cliente = null
-	vl_mes	   = null
-	
 	onShow(true,null)
 }
 
@@ -228,8 +239,10 @@ function onActionFiltrar() {
 	if(vl_cliente!=null) cliente_id=vl_cliente
 	if(vl_mes!=null) facte_imputacion_mes=vl_mes
 	if(vl_anio!=null) facte_imputacion_anio=vl_anio
+	if(vl_ptovta!=null) facte_ptovta=vl_ptovta
+	if(vl_numero!=null) facte_numero=vl_numero
 	vc_fact_enc_to_lg_talonarios.talonario_libro_iva = 1
-	var tmp_cant = controller.search() 
+	var tmp_cant = controller.search()
 
 	databaseManager.refreshRecordFromDatabase(foundset,-1)
 	
@@ -261,6 +274,10 @@ function onShow(firstShow, event) {
 		
 		vl_fec_desde=null
 		vl_fec_hasta=null
+		
+		vl_cliente = null
+		vl_ptovta  = null
+		vl_numero  = null
 	}
 	
 	onActionFiltrar()
@@ -329,11 +346,13 @@ function onActionDescargar()
 			tmp_ptovta 	  = utils.numberFormat(record.facte_ptovta,'00000')
 			tmp_nrocompd  = utils.numberFormat(record.facte_numero,'00000000000000000000')
 			tmp_nrocomph  = utils.numberFormat(record.facte_numero,'00000000000000000000')
-			tmp_coddoc	  = utils.numberFormat(record.vc_fact_enc_to_vc_clientes.vc_clientes_to_documentos.docu_codigo,'00')
-			tmp_nrodoc    = utils.numberFormat(utils.stringToNumber(record.vc_fact_enc_to_vc_clientes.cliente_nro_docu),'00000000000000000000')
-			tmp_nomcli 	  = utils.stringFormat("%1$-30s",new Array(record.vc_fact_enc_to_vc_clientes.cliente_nombre.substr(0,30)))
+//			tmp_coddoc	  = utils.numberFormat(record.vc_fact_enc_to_vc_clientes.vc_clientes_to_documentos.docu_codigo,'00')
+//			tmp_nrodoc    = utils.numberFormat(utils.stringToNumber(record.vc_fact_enc_to_vc_clientes.cliente_nro_docu),'00000000000000000000')
+//			tmp_nomcli 	  = utils.stringFormat("%1$-30s",new Array(record.vc_fact_enc_to_vc_clientes.cliente_nombre.substr(0,30)))
 			
-			//tmp_nomcli 	  = record.vc_fact_enc_to_vc_clientes.cliente_nombre.substr(0,30)
+			tmp_coddoc	  = utils.numberFormat(record.vc_fact_enc_to_documentos.docu_codigo,'00')
+			tmp_nrodoc    = utils.numberFormat(utils.stringToNumber(record.facte_cliente_nro_doc),'00000000000000000000')
+			tmp_nomcli 	  = utils.stringFormat("%1$-30s",new Array(record.facte_cliente_nombre.substr(0,30)))
 			
 //			if(record.facte_debe_haber=='D')
 //			{
@@ -912,9 +931,13 @@ function ExportarDetallado()
 					array_datos.push('SIN LOCALIDAD')
 				}
 				
-				array_datos.push(record.vc_fact_enc_to_vc_clientes.vc_clientes_to_lg_categorias_iva.cativa_abreviatura)
-				array_datos.push(record.vc_fact_enc_to_vc_clientes.vc_clientes_to_documentos.docu_codigo)
-				array_datos.push(record.vc_fact_enc_to_vc_clientes.cliente_nro_docu)
+//				array_datos.push(record.vc_fact_enc_to_vc_clientes.vc_clientes_to_lg_categorias_iva.cativa_abreviatura)
+//				array_datos.push(record.vc_fact_enc_to_vc_clientes.vc_clientes_to_documentos.docu_codigo)
+//				array_datos.push(record.vc_fact_enc_to_vc_clientes.cliente_nro_docu)
+
+				array_datos.push(record.vc_fact_enc_to_lg_categorias_iva.cativa_abreviatura)
+				array_datos.push(record.vc_fact_enc_to_documentos.docu_codigo)
+				array_datos.push(record.facte_cliente_nro_doc)
 
 				ds2.addRow(array_datos)
 			}

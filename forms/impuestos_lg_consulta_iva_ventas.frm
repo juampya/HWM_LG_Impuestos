@@ -67,12 +67,12 @@ typeid:47,
 uuid:"05982E24-EF29-4D90-8FD1-E0EBD5D8165B"
 },
 {
-cssPosition:"77,-1,-1,365,39,30",
+cssPosition:"77,-1,-1,328,39,30",
 json:{
 cssPosition:{
 bottom:"-1",
 height:"30",
-left:"365",
+left:"328",
 right:"-1",
 top:"77",
 width:"39"
@@ -85,7 +85,7 @@ typeid:47,
 uuid:"0801A582-2FCE-4523-8D23-4E51BCE298FC"
 },
 {
-cssPosition:"41,-1,-1,247,501,30",
+cssPosition:"41,-1,-1,247,533,30",
 json:{
 cssPosition:{
 bottom:"-1",
@@ -93,7 +93,7 @@ height:"30",
 left:"247",
 right:"-1",
 top:"41",
-width:"501"
+width:"533"
 },
 dataProviderID:"vl_cliente",
 valuelistID:"4EE6D793-AC89-40F4-8B5F-77BFABF2065B"
@@ -149,14 +149,14 @@ typeid:47,
 uuid:"34374D51-A1F6-4A2F-BC07-6B20C5FBFA9E"
 },
 {
-cssPosition:"77,calc(135px + 580px),-1,-1,220,30",
+cssPosition:"77,calc(135px + 388px),-1,-1,220,30",
 formIndex:2,
 json:{
 cssPosition:{
 bottom:"-1",
 height:"30",
 left:"-1",
-right:"calc(135px + 580px)",
+right:"calc(135px + 388px)",
 top:"77",
 width:"220"
 },
@@ -215,6 +215,24 @@ typeid:47,
 uuid:"518DAD65-1274-42B6-8442-4C09B5F92B30"
 },
 {
+cssPosition:"77,-1,-1,628,56,30",
+json:{
+cssPosition:{
+bottom:"-1",
+height:"30",
+left:"628",
+right:"-1",
+top:"77",
+width:"56"
+},
+text:"Número:"
+},
+name:"label_3",
+typeName:"bootstrapcomponents-label",
+typeid:47,
+uuid:"56DBCA17-F5A4-4635-97E0-966400CAB421"
+},
+{
 anchors:3,
 cssPosition:"746,-1,-1,1468,207,37",
 formIndex:6,
@@ -249,6 +267,26 @@ styleClass:"form-control lg-total ",
 typeName:"bootstrapcomponents-textbox",
 typeid:47,
 uuid:"57941ABF-3C6E-42E4-B4DA-1E4787B542C4"
+},
+{
+cssPosition:"77,-1,-1,689,91,30",
+json:{
+cssPosition:{
+bottom:"-1",
+height:"30",
+left:"689",
+right:"-1",
+top:"77",
+width:"91"
+},
+dataProviderID:"vl_numero",
+styleClass:"form-control lg-center"
+},
+name:"textbox_5",
+styleClass:"form-control lg-center",
+typeName:"bootstrapcomponents-textbox",
+typeid:47,
+uuid:"5A72039F-6452-47B5-81CE-F1B58CD7334F"
 },
 {
 cssPosition:"41,-1,-1,64,114,30",
@@ -339,6 +377,24 @@ typeid:19,
 uuid:"71012493-AD14-425B-8B17-39E1032B7BC0"
 },
 {
+cssPosition:"77,-1,-1,500,61,30",
+json:{
+cssPosition:{
+bottom:"-1",
+height:"30",
+left:"500",
+right:"-1",
+top:"77",
+width:"61"
+},
+text:"Pto. vta.:"
+},
+name:"label_2",
+typeName:"bootstrapcomponents-label",
+typeid:47,
+uuid:"71A5CC0F-22D1-44B8-8B4C-F9011ABF5D4B"
+},
+{
 anchors:3,
 cssPosition:"746,-1,-1,1248,207,37",
 formIndex:6,
@@ -375,14 +431,14 @@ typeid:47,
 uuid:"7494DACC-D6BB-4987-9787-95490DCE2E4F"
 },
 {
-cssPosition:"77,calc(135px + 805px),-1,-1,148,30",
+cssPosition:"77,calc(135px + 613px),-1,-1,148,30",
 formIndex:2,
 json:{
 cssPosition:{
 bottom:"-1",
 height:"30",
 left:"-1",
-right:"calc(135px + 805px)",
+right:"calc(135px + 613px)",
 top:"77",
 width:"148"
 },
@@ -450,6 +506,26 @@ styleClass:"lg-textologin lg-center",
 typeName:"bootstrapcomponents-label",
 typeid:47,
 uuid:"88C4F8B5-E47E-4A39-9E39-740136691DBB"
+},
+{
+cssPosition:"77,-1,-1,567,55,30",
+json:{
+cssPosition:{
+bottom:"-1",
+height:"30",
+left:"567",
+right:"-1",
+top:"77",
+width:"55"
+},
+dataProviderID:"vl_ptovta",
+styleClass:"form-control lg-center"
+},
+name:"textbox_4",
+styleClass:"form-control lg-center",
+typeName:"bootstrapcomponents-textbox",
+typeid:47,
+uuid:"8B4A2970-5B47-4E2B-A079-0BE179DB9980"
 },
 {
 cssPosition:"126,0,80,0,200,100",
@@ -531,7 +607,7 @@ width:200
 },
 {
 autoResize:false,
-dataprovider:"vc_fact_enc_to_vc_clientes.vc_clientes_to_lg_categorias_iva.cativa_abreviatura",
+dataprovider:"vc_fact_enc_to_lg_categorias_iva.cativa_abreviatura",
 headerTitle:"Cat.IVA",
 styleClass:"table_field_noBorder_center",
 svyUUID:"BE270F0C-49A4-4C30-B23A-2F77D9382E6B",
@@ -540,14 +616,14 @@ width:90
 },
 {
 autoResize:false,
-dataprovider:"vc_fact_enc_to_vc_clientes.vc_clientes_to_documentos.docu_descripcion",
+dataprovider:"vc_fact_enc_to_documentos.docu_descripcion",
 headerTitle:"T.doc.",
 svyUUID:"E89C66F6-48D9-4C11-B7ED-9462955638E9",
 width:90
 },
 {
 autoResize:false,
-dataprovider:"vc_fact_enc_to_vc_clientes.cliente_nro_docu",
+dataprovider:"facte_cliente_nro_doc",
 headerTitle:"N° doc.",
 svyUUID:"13536733-6FB1-420D-A640-95D94A065E96",
 width:120
@@ -917,12 +993,12 @@ typeid:47,
 uuid:"C5F8C599-CDF2-460B-8246-816975160A1E"
 },
 {
-cssPosition:"77,-1,-1,408,118,30",
+cssPosition:"77,-1,-1,371,118,30",
 json:{
 cssPosition:{
 bottom:"-1",
 height:"30",
-left:"408",
+left:"371",
 right:"-1",
 top:"77",
 width:"118"
@@ -972,14 +1048,14 @@ typeid:47,
 uuid:"CA3FE7DC-3A96-49C1-AA77-83BB294131A0"
 },
 {
-cssPosition:"41,calc(135px + 353px),-1,-1,220,30",
+cssPosition:"41,calc(135px + 161px),-1,-1,220,30",
 formIndex:2,
 json:{
 cssPosition:{
 bottom:"-1",
 height:"30",
 left:"-1",
-right:"calc(135px + 353px)",
+right:"calc(135px + 161px)",
 top:"41",
 width:"220"
 },
@@ -995,14 +1071,14 @@ typeid:47,
 uuid:"CD9946BB-16DB-49C1-BDD3-3942A53E4CC4"
 },
 {
-cssPosition:"41,calc(135px + 580px),-1,-1,220,30",
+cssPosition:"41,calc(135px + 388px),-1,-1,220,30",
 formIndex:2,
 json:{
 cssPosition:{
 bottom:"-1",
 height:"30",
 left:"-1",
-right:"calc(135px + 580px)",
+right:"calc(135px + 388px)",
 top:"41",
 width:"220"
 },
@@ -1198,14 +1274,14 @@ typeid:47,
 uuid:"FD2B8E87-7847-4371-BDC7-9B42D6C93BCB"
 },
 {
-cssPosition:"77,calc(135px + 353px),-1,-1,220,30",
+cssPosition:"77,calc(135px + 161px),-1,-1,220,30",
 formIndex:2,
 json:{
 cssPosition:{
 bottom:"-1",
 height:"30",
 left:"-1",
-right:"calc(135px + 353px)",
+right:"calc(135px + 161px)",
 top:"77",
 width:"220"
 },

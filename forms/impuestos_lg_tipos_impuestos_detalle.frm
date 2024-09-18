@@ -689,7 +689,7 @@ dataProviderID:"tipo_imp_categoria",
 valuelistID:"D0797E51-A1B0-464E-8ED4-1B6A3F3DF45D",
 visible:true
 },
-name:"tipo_imp_aplicacioncc",
+name:"tipo_imp_categoria",
 typeName:"bootstrapcomponents-combobox",
 typeid:47,
 uuid:"8D683629-9E91-4798-B9F9-7FD92367B0B0"
@@ -938,6 +938,7 @@ uuid:"E6630706-1C46-4380-9EE3-521716E5602D"
 },
 {
 cssPosition:"337,-1,-1,645,390,30",
+formIndex:1,
 json:{
 alignment:"horizontal",
 cssPosition:{
@@ -949,6 +950,7 @@ top:"337",
 width:"390"
 },
 dataProviderID:"vl_aplica_sobre_neto",
+formIndex:1,
 inputType:"radio",
 valuelistID:"B6E926EF-0921-4B47-B33C-C9503B59F5F4"
 },

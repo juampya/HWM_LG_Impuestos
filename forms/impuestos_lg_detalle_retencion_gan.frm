@@ -84,6 +84,38 @@ typeid:47,
 uuid:"3CC9504B-5BD8-4859-834B-0EC08651364A"
 },
 {
+anchors:3,
+cssPosition:"361,-1,-1,395,43,26",
+json:{
+anchors:3,
+cssPosition:{
+bottom:"-1",
+height:"26",
+left:"395",
+right:"-1",
+top:"361",
+width:"43"
+},
+imageStyleClass:"fa fa-print",
+location:{
+x:539,
+y:274
+},
+onActionMethodID:"D16AFA45-3643-42DD-ACC0-DA59178196B2",
+size:{
+height:30,
+width:43
+},
+toolTipText:"Imprimir comprobante de retención"
+},
+location:"539,274",
+name:"btn_imprimir",
+size:"43,30",
+typeName:"bootstrapcomponents-button",
+typeid:47,
+uuid:"5193E424-205D-49EA-9E49-382D682BF571"
+},
+{
 json:{
 anchors:0,
 location:{
@@ -439,7 +471,7 @@ height:24,
 width:543
 },
 styleClass:"lg-amarillo",
-valuelistID:"8928FD62-1D4B-4758-B02F-5676A32CC160"
+valuelistID:"BB288886-2A14-4627-8B30-51C619615AB8"
 },
 location:"156,108",
 name:"typeahead_1c",

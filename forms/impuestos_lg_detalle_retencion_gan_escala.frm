@@ -44,7 +44,7 @@ height:24,
 width:543
 },
 styleClass:"lg-amarillo",
-valuelistID:"8928FD62-1D4B-4758-B02F-5676A32CC160"
+valuelistID:"BB288886-2A14-4627-8B30-51C619615AB8"
 },
 location:"157,109",
 name:"typeahead_1c",
@@ -578,6 +578,38 @@ styleClass:"form-control lg-total",
 typeName:"bootstrapcomponents-textbox",
 typeid:47,
 uuid:"D0518C97-E233-41A7-9052-F693AC3C5FE1"
+},
+{
+anchors:3,
+cssPosition:"361,-1,-1,395,43,26",
+json:{
+anchors:3,
+cssPosition:{
+bottom:"-1",
+height:"26",
+left:"395",
+right:"-1",
+top:"361",
+width:"43"
+},
+imageStyleClass:"fa fa-print",
+location:{
+x:520,
+y:365
+},
+onActionMethodID:"8B2D505D-9624-453E-8FD2-2644CB8EE977",
+size:{
+height:30,
+width:43
+},
+toolTipText:"Imprimir comprobante de retención"
+},
+location:"520,365",
+name:"btn_imprimir",
+size:"43,30",
+typeName:"bootstrapcomponents-button",
+typeid:47,
+uuid:"D7FFB5F0-3443-43E1-B566-16812C8FFFA2"
 },
 {
 cssPosition:"37,-1,-1,9,619,26",

@@ -80,7 +80,7 @@ function onActionDetalle(event)
 	switch (tipo_imp_id) 
 	{
 		case 1:
-			forms.impuestos_lg_detalle_retencion_ibr.elements.lbl_titulo.text = "Retencion " + calc_comprobante + " - (" + utils.dateFormat(pp_impu_fecha,'dd/MM/yyyy') + ")"
+			forms.impuestos_lg_detalle_retencion_ibr.elements.lbl_titulo.text = "Retención " + calc_comprobante + " - (" + utils.dateFormat(pp_impu_fecha,'dd/MM/yyyy') + ")"
 			var w2 = application.createWindow("retencion_ibr", JSWindow.MODAL_DIALOG);
 			w2.title=scopes.globals.vg_titulo_popup_dialog
 			forms.impuestos_lg_detalle_retencion_ibr.controller.show(w2)
@@ -88,14 +88,14 @@ function onActionDetalle(event)
 		case 2:
 			if(scopes.globals.EMPTY(escala_id))
 			{
-				forms.impuestos_lg_detalle_retencion_gan.elements.lbl_titulo.text = "Retencion " + calc_comprobante + " - (" + utils.dateFormat(pp_impu_fecha,'dd/MM/yyyy') + ")"
+				forms.impuestos_lg_detalle_retencion_gan.elements.lbl_titulo.text = "Retención " + calc_comprobante + " - (" + utils.dateFormat(pp_impu_fecha,'dd/MM/yyyy') + ")"
 				var w3 = application.createWindow("retencion_gan", JSWindow.MODAL_DIALOG);
 				w3.title=scopes.globals.vg_titulo_popup_dialog
 				forms.impuestos_lg_detalle_retencion_gan.controller.show(w3)
 			}
 			else
 			{
-				forms.impuestos_lg_detalle_retencion_gan_escala.elements.lbl_titulo.text = "Retencion " + calc_comprobante + " - (" + utils.dateFormat(pp_impu_fecha,'dd/MM/yyyy') + ")"
+				forms.impuestos_lg_detalle_retencion_gan_escala.elements.lbl_titulo.text = "Retención " + calc_comprobante + " - (" + utils.dateFormat(pp_impu_fecha,'dd/MM/yyyy') + ")"
 				var w4 = application.createWindow("retencion_gan_escala", JSWindow.MODAL_DIALOG);
 				w4.title=scopes.globals.vg_titulo_popup_dialog
 				forms.impuestos_lg_detalle_retencion_gan_escala.controller.show(w4)
@@ -252,6 +252,12 @@ function onCellClick(foundsetindex, columnindex, record, event)
 		case 0:
 			onActionDetalle(null)
 		break;
+		case 12:
+			ImprimirComprobante()
+		break;
+		case 13:
+			
+		break;
 	}	
 }
 
@@ -327,7 +333,6 @@ function ImprimirConsultaDetallada()
 	}	
 	
 	plugins.jasperPluginRMI.runReport(foundset,'imp_retenciones_detallada.jasper',null,plugins.jasperPluginRMI.OUTPUT_FORMAT.VIEW,{pfecha_desde:vl_fec_desde,pfecha_hasta:vl_fec_hasta,pproveedor:tmp_provee,pimpuesto:tmp_impues,paplica:tmp_aplica})
-
 }
 
 
@@ -763,4 +768,18 @@ function onActionTotalProvincias(event)
 		scopes.globals.VentanaGenerica(scopes.globals.mx_usuario_id,scopes.globals.vg_titulo_popup_dialog, 'No existen datos para mostrar con los parámetros ingresados.', 'info',controller.getName(),null, null, null, null,null,null,null,null)
 	}
 }
+
+/**
+ * @properties={typeid:24,uuid:"67B0A899-4D97-4E85-953E-E172FA1F1B2E"}
+ */
+function ImprimirComprobante() 
+{
+	var pcod_comp  = pp_impu_cod.replace('/','')
+	var ptipo_comp = pp_comprobantes_impuestos_to_lg_talonarios.talonario_tipo_comp
+	var psuc_comp  = utils.numberFormat(pp_impu_pv,'0000')
+	var pnro_comp  = utils.numberFormat(pp_impu_nro,'00000000')
 	
+	var _file_name=pcod_comp+'_'+ptipo_comp+psuc_comp+pnro_comp
+
+	scopes.globals.GeneraArchivoPDF(talonario_id,foundset.getSelectedRecord(),_file_name)
+}

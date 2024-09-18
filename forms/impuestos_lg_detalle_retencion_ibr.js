@@ -10,3 +10,20 @@ function onActionCerrar(event)
 //	databaseManager.revertEditedRecords()
 	application.getWindow('retencion_ibr').hide()
 }
+
+/**
+ * @param {JSEvent} event
+ *
+ * @properties={typeid:24,uuid:"795D41AF-A996-453A-97F6-7D4333E7D41B"}
+ */
+function onAction_Imprimir(event) 
+{
+	var pcod_comp  = pp_impu_cod.replace('/','')
+	var ptipo_comp = pp_comprobantes_impuestos_to_lg_talonarios.talonario_tipo_comp
+	var psuc_comp  = utils.numberFormat(pp_impu_pv,'0000')
+	var pnro_comp  = utils.numberFormat(pp_impu_nro,'00000000')
+	
+	var _file_name=pcod_comp+'_'+ptipo_comp+psuc_comp+pnro_comp
+
+	scopes.globals.GeneraArchivoPDF(talonario_id,foundset.getSelectedRecord(),_file_name)
+}

@@ -5,7 +5,7 @@ anchors:3,
 json:{
 anchors:3,
 location:{
-x:1125,
+x:1500,
 y:42
 },
 size:{
@@ -14,7 +14,7 @@ width:78
 },
 text:"CANTIDAD"
 },
-location:"1125,42",
+location:"1500,42",
 name:"label_3cc",
 size:"78,19",
 typeName:"bootstrapcomponents-label",
@@ -31,7 +31,7 @@ editable:false,
 enabled:false,
 format:"##########",
 location:{
-x:1124,
+x:1498,
 y:62
 },
 size:{
@@ -40,7 +40,7 @@ width:80
 },
 styleClass:"lg-field-center"
 },
-location:"1124,62",
+location:"1498,62",
 name:"textbox_6",
 size:"80,19",
 styleClass:"lg-field-center",
@@ -80,14 +80,14 @@ y:0
 },
 size:{
 height:35,
-width:1363
+width:1589
 },
 styleClass:"lg-titulo",
 text:"Listado de RETENCIONES"
 },
 location:"0,0",
 name:"label_122",
-size:"1363,35",
+size:"1589,35",
 styleClass:"lg-titulo",
 typeName:"servoydefault-label",
 typeid:47,
@@ -128,7 +128,7 @@ anchors:7,
 formIndex:1,
 imageStyleClass:"far fa-file-excel",
 location:{
-x:542,
+x:764,
 y:6
 },
 onActionMethodID:"C8D7E49F-4C3A-40F3-86C9-0EEAFDBF97C1",
@@ -139,7 +139,7 @@ width:129
 text:"Exportar",
 toolTipText:"Imprimir"
 },
-location:"542,6",
+location:"764,6",
 name:"btn_exportar",
 size:"129,25",
 typeName:"bootstrapcomponents-button",
@@ -182,14 +182,14 @@ x:53,
 y:581
 },
 size:{
-height:19,
+height:28,
 width:305
 },
 styleClass:"lg-field-right lg-disable",
 text:"TOTAL Percepciones/Retenciones : "
 },
 location:"53,581",
-size:"305,19",
+size:"305,28",
 styleClass:"lg-field-right lg-disable",
 typeName:"bootstrapcomponents-label",
 typeid:47,
@@ -293,7 +293,7 @@ anchors:7,
 formIndex:1,
 imageStyleClass:"fa fa-refresh",
 location:{
-x:1092,
+x:1314,
 y:6
 },
 onActionMethodID:"A05A7DF5-AF20-4386-B937-00ADD1D25679",
@@ -304,7 +304,7 @@ width:129
 text:"Refrescar",
 toolTipText:"Refrescar"
 },
-location:"1092,6",
+location:"1314,6",
 name:"btn_refrescar",
 size:"129,25",
 typeName:"bootstrapcomponents-button",
@@ -345,7 +345,7 @@ width:"32"
 },
 imageStyleClass:"fa fa-plus-square",
 location:{
-x:1121,
+x:1215,
 y:46
 },
 onActionMethodID:"2C830069-A0E4-4055-8B6C-E815B4AF6D15",
@@ -358,7 +358,7 @@ text:"Totales por Provincias",
 toolTipText:"Totales por Provincias",
 visible:true
 },
-location:"1121,46",
+location:"1215,46",
 name:"btn_chq_propiosc",
 size:"218,30",
 typeName:"bootstrapcomponents-button",
@@ -395,7 +395,7 @@ anchors:7,
 formIndex:1,
 imageStyleClass:"fa fa-print",
 location:{
-x:676,
+x:898,
 y:6
 },
 onActionMethodID:"987DCED3-09F0-4571-8B55-CC99B01B45EF",
@@ -406,7 +406,7 @@ width:129
 text:"Imprimir",
 toolTipText:"Imprimir"
 },
-location:"676,6",
+location:"898,6",
 name:"btn_imrpimir",
 size:"129,25",
 typeName:"bootstrapcomponents-button",
@@ -442,7 +442,7 @@ anchors:7,
 formIndex:1,
 imageStyleClass:"fas fa-cog",
 location:{
-x:957,
+x:1179,
 y:6
 },
 onActionMethodID:"A9CAB026-20D3-48B9-AED3-4367E022FD32",
@@ -453,7 +453,7 @@ width:129
 text:"Consultar",
 toolTipText:"Consultar"
 },
-location:"957,6",
+location:"1179,6",
 name:"btn_consultar",
 size:"129,25",
 typeName:"bootstrapcomponents-button",
@@ -608,17 +608,6 @@ styleClass:"table_button_print_fa_fa",
 svyUUID:"D6CF6B7A-B3BB-4E2D-B7B5-F47FD0DFF3C4",
 valuelist:null,
 width:30
-},
-{
-autoResize:false,
-enableResize:false,
-enableRowGroup:false,
-enableSort:false,
-enableToolPanel:false,
-styleClass:"table_button_anular_fa_fa",
-svyUUID:"06088FBC-869D-4FCF-918D-C309C1AEEC21",
-valuelist:null,
-width:30
 }
 ],
 location:{
@@ -632,12 +621,12 @@ showColumnsMenuTab:true,
 showGroupCount:true,
 size:{
 height:463,
-width:1356
+width:1582
 }
 },
 location:"4,97",
 name:"groupingtable_encabesado",
-size:"1356,463",
+size:"1582,463",
 typeName:"aggrid-groupingtable",
 typeid:47,
 uuid:"C170FEFB-FDAD-46A0-BA9F-A96696E99B0A"
@@ -656,13 +645,13 @@ x:364,
 y:581
 },
 size:{
-height:19,
+height:28,
 width:146
 },
 styleClass:"lg-field-right"
 },
 location:"364,581",
-size:"146,19",
+size:"146,28",
 styleClass:"lg-field-right",
 typeName:"bootstrapcomponents-textbox",
 typeid:47,
@@ -697,7 +686,7 @@ anchors:7,
 formIndex:2,
 imageStyleClass:"fa fa-share-square",
 location:{
-x:1227,
+x:1449,
 y:6
 },
 onActionMethodID:"2589270F-048B-40FC-9368-C067E83EF6C9",
@@ -708,7 +697,7 @@ width:129
 text:"Volver",
 toolTipText:"Volver"
 },
-location:"1227,6",
+location:"1449,6",
 name:"btn_volver",
 size:"129,25",
 typeName:"bootstrapcomponents-button",
@@ -723,7 +712,7 @@ anchors:7,
 formIndex:1,
 imageStyleClass:"fa fa-cloud-download",
 location:{
-x:811,
+x:1033,
 y:6
 },
 onActionMethodID:"F4751A24-2AAB-4FE5-B4A5-3A23524923AE",
@@ -734,7 +723,7 @@ width:141
 text:"Archivos AFIP",
 toolTipText:"Descargar"
 },
-location:"811,6",
+location:"1033,6",
 name:"btn_descargar",
 size:"141,25",
 typeName:"bootstrapcomponents-button",
@@ -767,7 +756,7 @@ name:"impuestos_lg_consulta_retenciones",
 navigatorID:"-1",
 onShowMethodID:"6E4A7646-62A2-41B5-9024-95C2BF7ECDD6",
 showInMenu:true,
-size:"1364,614",
+size:"1590,614",
 typeid:3,
 uuid:"CA8E4315-792A-4594-9FE6-FB2A30503D89",
 view:5
