@@ -1,6 +1,13 @@
 /**
  * @type {Number}
  *
+ * @properties={typeid:35,uuid:"AC1FA0F2-1EAF-4EEE-B1DB-223327C30AF6",variableType:4}
+ */
+var vl_cod_impuesto = null;
+
+/**
+ * @type {Number}
+ *
  * @properties={typeid:35,uuid:"DDF3F8F2-5316-4F7E-A6AC-6735324A29B3",variableType:4}
  */
 var vl_aplica_sobre_neto = null;
@@ -203,6 +210,7 @@ function onActionAgregar(event)
 		imp_tipo_impuestos_to_imp_tipo_impuestos_aplicacion.escala_id 				= vl_escala_id
 		imp_tipo_impuestos_to_imp_tipo_impuestos_aplicacion.provincia_id 			= vl_provincia_id
 		imp_tipo_impuestos_to_imp_tipo_impuestos_aplicacion.aplica_sobre_neto 	 	= vl_aplica_sobre_neto
+		imp_tipo_impuestos_to_imp_tipo_impuestos_aplicacion.aplica_cod_impuesto	 	= vl_cod_impuesto
 		imp_tipo_impuestos_to_imp_tipo_impuestos_aplicacion.emp_id					= scopes.globals.mx_empresa_id
 		
 		SetearVariables()
@@ -229,6 +237,7 @@ function SetearVariables()
 	vl_escala_id	 	 = null
 	vl_provincia_id	 	 = 0
 	vl_aplica_sobre_neto = 1
+	vl_cod_impuesto		 = null
 }
 
 /**
@@ -286,7 +295,7 @@ function onCellClick(foundsetindex, columnindex, record, event)
 		case 0:
 			onActionDetalle()
 		break;
-		case 11:
+		case 12:
 			onActionBorrar()
 		break;
 	}

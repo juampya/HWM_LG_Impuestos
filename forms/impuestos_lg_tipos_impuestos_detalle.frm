@@ -187,7 +187,7 @@ typeid:47,
 uuid:"38C9BF59-31D5-4F4B-8897-B342A1B4D17D"
 },
 {
-cssPosition:"388,-1,-1,2,1144,242",
+cssPosition:"388,-1,-1,2,1420,242",
 formIndex:6,
 json:{
 columns:[
@@ -202,20 +202,25 @@ svyUUID:"9DA240AA-A5C5-4443-AF0F-6B0DB4C3BA58",
 width:30
 },
 {
-autoResize:false,
 dataprovider:"aplica_descripcion",
-enableResize:false,
 enableRowGroup:false,
-enableToolPanel:false,
 headerTitle:"Descripción",
 svyUUID:"4038BDAF-526C-409F-BE96-9743221AFD34",
 width:200
 },
 {
 autoResize:false,
+dataprovider:"aplica_cod_impuesto",
+enableRowGroup:false,
+headerTitle:"Cód. imp.",
+styleClass:"table_field_noBorder_center",
+svyUUID:"50ACEEED-4EDB-4C46-90D3-4C368F74FE70",
+width:120
+},
+{
+autoResize:false,
 dataprovider:"aplica_regimen",
 enableRowGroup:false,
-enableToolPanel:false,
 headerTitle:"Cód. reg.",
 styleClass:"table_field_noBorder_center",
 svyUUID:"AFACB70B-CBC3-40C4-A834-518496D1EAA6",
@@ -225,7 +230,6 @@ width:100
 autoResize:false,
 dataprovider:"aplica_resolucion",
 enableRowGroup:false,
-enableToolPanel:false,
 headerTitle:"RG N°",
 styleClass:"table_field_noBorder_center",
 svyUUID:"974CBFD8-7900-4286-B9CB-8D8EE6924378",
@@ -235,7 +239,6 @@ width:80
 autoResize:false,
 dataprovider:"aplica_vigencia",
 enableRowGroup:false,
-enableToolPanel:false,
 format:"dd/MM/yyyy",
 headerTitle:"Vigencia",
 styleClass:"table_field_noBorder_center",
@@ -246,7 +249,6 @@ width:100
 autoResize:false,
 dataprovider:"aplica_base_noimponible",
 enableRowGroup:false,
-enableToolPanel:false,
 format:"#,##0.00",
 headerTitle:"Base no imp.",
 styleClass:"table_field_noBorder_right",
@@ -257,7 +259,6 @@ width:115
 autoResize:false,
 dataprovider:"aplica_minimo",
 enableRowGroup:false,
-enableToolPanel:false,
 format:"#,##0.00",
 headerTitle:"Mínimo",
 styleClass:"table_field_noBorder_right",
@@ -268,7 +269,6 @@ width:110
 autoResize:false,
 dataprovider:"aplica_alicuota",
 enableRowGroup:false,
-enableToolPanel:false,
 format:"#,##0.00",
 headerTitle:"Alíc. %",
 styleClass:"table_field_noBorder_right",
@@ -279,7 +279,6 @@ width:90
 autoResize:false,
 dataprovider:"aplica_usa_escala",
 enableRowGroup:false,
-enableToolPanel:false,
 headerTitle:"Escala",
 styleClass:"table_field_noBorder_center",
 svyUUID:"5E69F33F-DBAE-4147-B5BF-6930DC93303E",
@@ -290,7 +289,6 @@ width:80
 autoResize:false,
 dataprovider:"escala_id",
 enableRowGroup:false,
-enableToolPanel:false,
 headerTitle:"Tipo Escala",
 styleClass:"table_field_noBorder_left",
 svyUUID:"92CCD86A-FC55-435F-B308-4DCFFCACF977",
@@ -300,10 +298,8 @@ width:120
 {
 autoResize:false,
 dataprovider:"provincia_id",
-enableResize:false,
 enableRowGroup:false,
 enableSort:false,
-enableToolPanel:false,
 headerTitle:"Provincia",
 styleClass:"table_field_noBorder_left",
 svyUUID:"B377FB16-CEAC-414C-809D-4ECF39B3B4AE",
@@ -327,7 +323,7 @@ height:"242",
 left:"2",
 right:"-1",
 top:"388",
-width:"1144"
+width:"1420"
 },
 formIndex:6,
 myFoundset:{
@@ -426,6 +422,26 @@ typeid:47,
 uuid:"4CCF328C-B318-4266-B5ED-693D11858E88"
 },
 {
+cssPosition:"151,-1,-1,756,85,30",
+formIndex:12,
+json:{
+cssPosition:{
+bottom:"-1",
+height:"30",
+left:"756",
+right:"-1",
+top:"151",
+width:"85"
+},
+dataProviderID:"vl_cod_impuesto",
+formIndex:12
+},
+name:"vl_cod_impuesto",
+typeName:"bootstrapcomponents-textbox",
+typeid:47,
+uuid:"53DCAB6A-AFEB-4076-8B9B-FB5D3AEF7223"
+},
+{
 cssPosition:"80,-1,-1,498,277,30",
 json:{
 cssPosition:{
@@ -512,14 +528,36 @@ typeid:47,
 uuid:"6BB04E12-E4F9-4D6D-9642-80B02E9F6861"
 },
 {
-cssPosition:"645,-1,-1,446,121,30",
+cssPosition:"151,-1,-1,646,105,30",
+formIndex:15,
 json:{
 cssPosition:{
 bottom:"-1",
 height:"30",
-left:"446",
+left:"646",
 right:"-1",
-top:"645",
+top:"151",
+width:"105"
+},
+formIndex:15,
+styleClassExpression:null,
+text:"Cód. impuesto:",
+toolTipText:"Código de Régimen"
+},
+name:"label_690cccccccccccc",
+typeName:"bootstrapcomponents-label",
+typeid:47,
+uuid:"6C8BE650-EE0F-460F-B341-A8354D5FEC1B"
+},
+{
+cssPosition:"646,-1,-1,590,121,30",
+json:{
+cssPosition:{
+bottom:"-1",
+height:"30",
+left:"590",
+right:"-1",
+top:"646",
 width:"121"
 },
 imageStyleClass:"fas fa-save",
@@ -854,14 +892,14 @@ typeid:47,
 uuid:"C63DA3A9-E85D-41C2-B8DB-0229938A2337"
 },
 {
-cssPosition:"645,-1,-1,578,121,30",
+cssPosition:"646,-1,-1,722,121,30",
 json:{
 cssPosition:{
 bottom:"-1",
 height:"30",
-left:"578",
+left:"722",
 right:"-1",
-top:"645",
+top:"646",
 width:"121"
 },
 imageStyleClass:"fa fa-share-square",
@@ -1069,6 +1107,6 @@ navigatorID:"-1",
 onHideMethodID:"70955BD5-385B-40E3-B0FE-ABB1C1B9CB04",
 onShowMethodID:"911452CB-FBB9-4B24-83C7-B2837246E036",
 showInMenu:true,
-size:"1150,689",
+size:"1426,689",
 typeid:3,
 uuid:"34F5841C-DCFC-4641-A4BD-F7C8F70C1165"

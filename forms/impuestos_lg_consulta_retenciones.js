@@ -426,7 +426,7 @@ function descargarRetencionGanancias()
 		var textData_sujetos = ''
 		var textData_comprob = ''
 
-		tmp_proveed_id = 0		
+		tmp_proveed_id = 0
 		
 		var tmp_c01 = ''
 		var tmp_c02 = ''
@@ -467,26 +467,27 @@ function descargarRetencionGanancias()
 		{
 			var record = foundset.getRecord(i);
 			
-			tmp_c01 = '06'
+			tmp_c01 = '06' // CODIGO DE COMPROBANTE 06: ORDEN DE PAGO
 			tmp_c02 = utils.dateFormat(record.pp_impu_fecha,'dd/MM/yyyy')
-			//tmp_c02 = utils.dateFormat(record.pp_comprobantes_impuestos_to_pp_comprobantes_enc.comp_fecha,'dd/MM/yyyy')
 			tmp_c03 = utils.numberFormat(record.pp_impu_nro,'0000000000000000')
-			tmp_c04 = utils.numberFormat(record.pp_comprobantes_impuestos_to_pp_comprobantes_enc.comp_tot_to,'0000000000000.00')	
-			tmp_c05 = utils.numberFormat(record.pp_impu_regimen,'0000')
-			tmp_c06 = utils.numberFormat(record.pp_impu_resolucion,'000')			
-			tmp_c07 = '1'
-			tmp_c08 = utils.numberFormat(record.pp_impu_base_imponible,'00000000000.00')
+			tmp_c04 = utils.numberFormat(record.pp_comprobantes_impuestos_to_pp_comprobantes_enc.comp_tot_to,'0000000000000.00')
+			tmp_c05 = utils.numberFormat(record.pp_impu_cod_impuesto,'0000')
+			//tmp_c05 = utils.numberFormat(record.pp_impu_regimen,'0000')
+			//tmp_c06 = utils.numberFormat(record.pp_impu_resolucion,'000')
+			tmp_c06 = utils.numberFormat(record.pp_impu_regimen,'000')		
+			tmp_c07 = '1' // CODIGO DE OPERACION
+			tmp_c08 = utils.numberFormat(record.pp_impu_base_imponible,'00000000000.00') //BASE PARA CALCULO
 			tmp_c09 = utils.dateFormat(record.pp_impu_fecha,'dd/MM/yyyy')
-			tmp_c10 = '01'		
-			tmp_c11 = '0'			
-			tmp_c12 = utils.numberFormat(record.pp_impu_importe,'00000000000.00')
-			tmp_c13 = '000000'		
-			tmp_c14 = '          '	
+			tmp_c10 = '01' // CODIGO DE CONDICION
+			tmp_c11 = '0' // RETENCION PRACTICADA A SUJETOS SUSPENDIDOS
+			tmp_c12 = utils.numberFormat(record.pp_impu_importe,'00000000000.00') // IMPORTE RETENIDO
+			tmp_c13 = '000000'
+			tmp_c14 = '          '
 				
 			if(!scopes.globals.EMPTY(record.pp_comprobantes_impuestos_to_pp_proveedores.docu_id))
 			{
-//				tmp_c15	  = utils.numberFormat(record.pp_comprobantes_impuestos_to_pp_comprobantes_enc.pp_comprobantes_enc_to_pp_proveedores.pp_proveedores_to_documentos.docu_codigo,'00')
-				tmp_c15	  = utils.numberFormat(record.pp_comprobantes_impuestos_to_pp_proveedores.pp_proveedores_to_documentos.docu_codigo,'00')
+//				tmp_c15	= utils.numberFormat(record.pp_comprobantes_impuestos_to_pp_comprobantes_enc.pp_comprobantes_enc_to_pp_proveedores.pp_proveedores_to_documentos.docu_codigo,'00')
+				tmp_c15	= utils.numberFormat(record.pp_comprobantes_impuestos_to_pp_proveedores.pp_proveedores_to_documentos.docu_codigo,'00')
 
 			}
 			else
@@ -495,7 +496,7 @@ function descargarRetencionGanancias()
 			}
 			if(!scopes.globals.EMPTY(record.pp_comprobantes_impuestos_to_pp_proveedores.provee_nro_docu))
 			{
-				tmp_c16    = utils.numberFormat(utils.stringToNumber(record.pp_comprobantes_impuestos_to_pp_proveedores.provee_nro_docu),'00000000000000000000')
+				tmp_c16 = utils.numberFormat(utils.stringToNumber(record.pp_comprobantes_impuestos_to_pp_proveedores.provee_nro_docu),'00000000000000000000')
 			}
 			else
 			{
@@ -507,12 +508,12 @@ function descargarRetencionGanancias()
 			tmp_c20 = '           '
 			tmp_c21 = '           '
 
-			tmp_c50   = utils.stringFormat("%1$-20s",new Array(record.pp_comprobantes_impuestos_to_pp_proveedores.provee_nombre.substr(0,20)))			
-			tmp_c51   = utils.stringFormat("%1$-20s",new Array(record.pp_comprobantes_impuestos_to_pp_proveedores.provee_domicilio.substr(0,20)))			
-			tmp_c52	  = utils.stringFormat("%1$-20s",new Array(record.pp_comprobantes_impuestos_to_pp_proveedores.pp_proveedores_to_localidades.localidad_nombre.substr(0,20)))
-			tmp_c53	  = '00'
-			tmp_c54	  = utils.numberFormat(utils.stringToNumber(record.pp_comprobantes_impuestos_to_pp_proveedores.pp_proveedores_to_localidades.localidad_cod_postal),'00000000')			
-			tmp_c55   = utils.numberFormat(utils.stringToNumber(record.pp_comprobantes_impuestos_to_pp_proveedores.provee_nro_docu),'00000000000')		
+			tmp_c50 = utils.stringFormat("%1$-20s",new Array(record.pp_comprobantes_impuestos_to_pp_proveedores.provee_nombre.substr(0,20)))			
+			tmp_c51 = utils.stringFormat("%1$-20s",new Array(record.pp_comprobantes_impuestos_to_pp_proveedores.provee_domicilio.substr(0,20)))			
+			tmp_c52	= utils.stringFormat("%1$-20s",new Array(record.pp_comprobantes_impuestos_to_pp_proveedores.pp_proveedores_to_localidades.localidad_nombre.substr(0,20)))
+			tmp_c53	= '00'
+			tmp_c54	= utils.numberFormat(utils.stringToNumber(record.pp_comprobantes_impuestos_to_pp_proveedores.pp_proveedores_to_localidades.localidad_cod_postal),'00000000')			
+			tmp_c55 = utils.numberFormat(utils.stringToNumber(record.pp_comprobantes_impuestos_to_pp_proveedores.provee_nro_docu),'00000000000')		
 
 			textData_comprob = textData_comprob+tmp_c01+tmp_c02+tmp_c03+tmp_c04+tmp_c05+tmp_c06+tmp_c07+tmp_c08+tmp_c09+tmp_c10+tmp_c11
 			textData_comprob = textData_comprob+tmp_c12+tmp_c13+tmp_c14+tmp_c15+tmp_c16+tmp_c17+tmp_c18+tmp_c19+tmp_c20+tmp_c21+'\n'

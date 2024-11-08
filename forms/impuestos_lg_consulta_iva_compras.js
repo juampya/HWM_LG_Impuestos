@@ -484,7 +484,7 @@ function onActionDescargar(event) {
 							
 						if(j==1)
 						{
-							if(tmp_item_imp_insc>0)
+							if(tmp_item_imp_insc>0|tmp_item_imp_insc<0) // AGREGO <0 POR LOS DESCUENTOS QUE VAN EN NEGATIVO
 							{
 								tmp_alicuotas++
 							}

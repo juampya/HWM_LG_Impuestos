@@ -3,7 +3,7 @@ useCssPosition:true",
 dataSource:"db:/sistemas/imp_tipo_impuestos_aplicacion",
 items:[
 {
-cssPosition:"135,-1,-1,377,130,30",
+cssPosition:"151,-1,-1,377,130,30",
 formIndex:1,
 json:{
 cssPosition:{
@@ -11,7 +11,7 @@ bottom:"-1",
 height:"30",
 left:"377",
 right:"-1",
-top:"135",
+top:"151",
 width:"130"
 },
 dataProviderID:"aplica_minimo",
@@ -27,7 +27,7 @@ typeid:47,
 uuid:"031F1DE2-F010-4B9D-9738-7DF7B2AFC37B"
 },
 {
-cssPosition:"253,-1,-1,146,390,29",
+cssPosition:"269,-1,-1,146,390,29",
 json:{
 alignment:"horizontal",
 cssPosition:{
@@ -35,7 +35,7 @@ bottom:"-1",
 height:"29",
 left:"146",
 right:"-1",
-top:"253",
+top:"269",
 width:"390"
 },
 dataProviderID:"aplica_sobre_neto",
@@ -48,14 +48,14 @@ typeid:47,
 uuid:"08C09C1A-52F5-4F57-B573-7C0451F43264"
 },
 {
-cssPosition:"416,-1,-1,288,121,30",
+cssPosition:"432,-1,-1,288,121,30",
 json:{
 cssPosition:{
 bottom:"-1",
 height:"30",
 left:"288",
 right:"-1",
-top:"416",
+top:"432",
 width:"121"
 },
 imageStyleClass:"fas fa-save",
@@ -68,14 +68,14 @@ typeid:47,
 uuid:"24234EC8-A959-4792-AEED-44B05511EF5A"
 },
 {
-cssPosition:"371,-1,-1,10,145,30",
+cssPosition:"387,-1,-1,10,145,30",
 json:{
 cssPosition:{
 bottom:"-1",
 height:"30",
 left:"10",
 right:"-1",
-top:"371",
+top:"387",
 width:"145"
 },
 text:"Provincia:"
@@ -86,7 +86,7 @@ typeid:47,
 uuid:"26EC5A7F-D375-4537-B3A1-18B480D8846C"
 },
 {
-cssPosition:"135,-1,-1,609,76,30",
+cssPosition:"151,-1,-1,609,76,30",
 formIndex:1,
 json:{
 cssPosition:{
@@ -94,7 +94,7 @@ bottom:"-1",
 height:"30",
 left:"609",
 right:"-1",
-top:"135",
+top:"151",
 width:"76"
 },
 dataProviderID:"aplica_alicuota",
@@ -110,7 +110,7 @@ typeid:47,
 uuid:"37028B6A-53D4-4F35-B5BB-8C3982784E15"
 },
 {
-cssPosition:"100,-1,-1,309,509,30",
+cssPosition:"116,-1,-1,309,509,30",
 formIndex:2,
 json:{
 cssPosition:{
@@ -118,7 +118,7 @@ bottom:"-1",
 height:"30",
 left:"309",
 right:"-1",
-top:"100",
+top:"116",
 width:"509"
 },
 formIndex:2,
@@ -134,7 +134,7 @@ typeid:47,
 uuid:"3B9E4862-68BD-4E4D-9F24-BB6D251BEF13"
 },
 {
-cssPosition:"100,-1,-1,160,130,30",
+cssPosition:"116,-1,-1,160,130,30",
 formIndex:1,
 json:{
 cssPosition:{
@@ -142,7 +142,7 @@ bottom:"-1",
 height:"30",
 left:"160",
 right:"-1",
-top:"100",
+top:"116",
 width:"130"
 },
 dataProviderID:"aplica_regimen",
@@ -156,7 +156,7 @@ typeid:47,
 uuid:"3DB300A3-C501-4199-A587-9DAD287ECEC2"
 },
 {
-cssPosition:"215,-1,-1,10,145,30",
+cssPosition:"231,-1,-1,10,145,30",
 formIndex:2,
 json:{
 cssPosition:{
@@ -164,7 +164,7 @@ bottom:"-1",
 height:"30",
 left:"10",
 right:"-1",
-top:"215",
+top:"231",
 width:"145"
 },
 formIndex:2,
@@ -178,7 +178,7 @@ typeid:47,
 uuid:"47A0D6B7-E9FF-412C-BA50-56E5B21C4026"
 },
 {
-cssPosition:"215,-1,-1,375,130,30",
+cssPosition:"231,-1,-1,375,130,30",
 formIndex:1,
 json:{
 cssPosition:{
@@ -186,7 +186,7 @@ bottom:"-1",
 height:"30",
 left:"375",
 right:"-1",
-top:"215",
+top:"231",
 width:"130"
 },
 dataProviderID:"aplica_minimo_noinsc",
@@ -224,7 +224,7 @@ typeid:47,
 uuid:"50157BC3-22E1-4B46-B90D-86EB9C9AFA49"
 },
 {
-cssPosition:"215,-1,-1,309,60,30",
+cssPosition:"231,-1,-1,309,60,30",
 formIndex:2,
 json:{
 cssPosition:{
@@ -232,7 +232,7 @@ bottom:"-1",
 height:"30",
 left:"309",
 right:"-1",
-top:"215",
+top:"231",
 width:"60"
 },
 formIndex:2,
@@ -246,7 +246,7 @@ typeid:47,
 uuid:"5081F4BF-2084-434E-884B-BF2194558F91"
 },
 {
-cssPosition:"100,-1,-1,10,145,30",
+cssPosition:"116,-1,-1,10,145,30",
 formIndex:2,
 json:{
 cssPosition:{
@@ -254,7 +254,7 @@ bottom:"-1",
 height:"30",
 left:"10",
 right:"-1",
-top:"100",
+top:"116",
 width:"145"
 },
 formIndex:2,
@@ -268,7 +268,7 @@ typeid:47,
 uuid:"59CC0615-CAD1-402D-A325-DF93CD60E939"
 },
 {
-cssPosition:"180,-1,-1,309,509,30",
+cssPosition:"196,-1,-1,309,509,30",
 formIndex:2,
 json:{
 cssPosition:{
@@ -276,7 +276,7 @@ bottom:"-1",
 height:"30",
 left:"309",
 right:"-1",
-top:"180",
+top:"196",
 width:"509"
 },
 formIndex:2,
@@ -292,7 +292,7 @@ typeid:47,
 uuid:"5AFA2E73-D798-4E24-91D0-DED6F2FB0002"
 },
 {
-cssPosition:"215,-1,-1,160,130,30",
+cssPosition:"231,-1,-1,160,130,30",
 formIndex:1,
 json:{
 cssPosition:{
@@ -300,7 +300,7 @@ bottom:"-1",
 height:"30",
 left:"160",
 right:"-1",
-top:"215",
+top:"231",
 width:"130"
 },
 dataProviderID:"aplica_base_noimponible",
@@ -316,14 +316,14 @@ typeid:47,
 uuid:"631077E3-7D83-4CFB-855F-D71A0E2A1540"
 },
 {
-cssPosition:"416,-1,-1,420,121,30",
+cssPosition:"432,-1,-1,420,121,30",
 json:{
 cssPosition:{
 bottom:"-1",
 height:"30",
 left:"420",
 right:"-1",
-top:"416",
+top:"432",
 width:"121"
 },
 imageStyleClass:"fa fa-share-square",
@@ -336,14 +336,14 @@ typeid:47,
 uuid:"6B559257-F63E-4E34-B57C-AF3AA5440409"
 },
 {
-cssPosition:"330,-1,-1,10,145,30",
+cssPosition:"346,-1,-1,10,145,30",
 json:{
 cssPosition:{
 bottom:"-1",
 height:"30",
 left:"10",
 right:"-1",
-top:"330",
+top:"346",
 width:"145"
 },
 text:"Cuenta Contable : "
@@ -354,7 +354,7 @@ typeid:47,
 uuid:"6EB65018-6F1E-4F9A-9546-CF6D3C025F4F"
 },
 {
-cssPosition:"135,-1,-1,309,60,30",
+cssPosition:"151,-1,-1,309,60,30",
 formIndex:2,
 json:{
 cssPosition:{
@@ -362,7 +362,7 @@ bottom:"-1",
 height:"30",
 left:"309",
 right:"-1",
-top:"135",
+top:"151",
 width:"60"
 },
 formIndex:2,
@@ -397,14 +397,14 @@ typeid:47,
 uuid:"92325FE9-5919-4157-ABC6-6D27380C9660"
 },
 {
-cssPosition:"330,-1,-1,160,656,30",
+cssPosition:"346,-1,-1,160,656,30",
 json:{
 cssPosition:{
 bottom:"-1",
 height:"30",
 left:"160",
 right:"-1",
-top:"330",
+top:"346",
 width:"656"
 },
 dataProviderID:"cuenta_id",
@@ -416,7 +416,29 @@ typeid:47,
 uuid:"982D0D9E-0E77-4556-A134-9B85F781BB79"
 },
 {
-cssPosition:"135,-1,-1,527,78,30",
+cssPosition:"81,-1,-1,160,130,30",
+formIndex:1,
+json:{
+cssPosition:{
+bottom:"-1",
+height:"30",
+left:"160",
+right:"-1",
+top:"81",
+width:"130"
+},
+dataProviderID:"aplica_cod_impuesto",
+formIndex:1,
+styleClass:"form-control lg-center"
+},
+name:"vl_regimenc",
+styleClass:"form-control lg-center",
+typeName:"bootstrapcomponents-textbox",
+typeid:47,
+uuid:"A1B305C7-0892-4076-A2FB-125689FA8934"
+},
+{
+cssPosition:"151,-1,-1,527,78,30",
 formIndex:2,
 json:{
 cssPosition:{
@@ -424,7 +446,7 @@ bottom:"-1",
 height:"30",
 left:"527",
 right:"-1",
-top:"135",
+top:"151",
 width:"78"
 },
 formIndex:2,
@@ -458,14 +480,14 @@ typeid:47,
 uuid:"B2146200-575D-47B1-8BC7-6DBAAF648C22"
 },
 {
-cssPosition:"371,-1,-1,160,167,30",
+cssPosition:"387,-1,-1,160,167,30",
 json:{
 cssPosition:{
 bottom:"-1",
 height:"30",
 left:"160",
 right:"-1",
-top:"371",
+top:"387",
 width:"167"
 },
 dataProviderID:"provincia_id",
@@ -477,7 +499,29 @@ typeid:47,
 uuid:"BDDAE093-62C2-4632-B688-FFF81BF2488E"
 },
 {
-cssPosition:"290,-1,-1,10,145,30",
+cssPosition:"81,-1,-1,10,145,30",
+formIndex:2,
+json:{
+cssPosition:{
+bottom:"-1",
+height:"30",
+left:"10",
+right:"-1",
+top:"81",
+width:"145"
+},
+formIndex:2,
+styleClassExpression:null,
+text:"Código de impuesto: ",
+toolTipText:"Código de Régimen : "
+},
+name:"label_690cccccccccccc",
+typeName:"bootstrapcomponents-label",
+typeid:47,
+uuid:"C3A45BD0-BBE0-43B6-A65B-93C0809995C4"
+},
+{
+cssPosition:"306,-1,-1,10,145,30",
 formIndex:21,
 json:{
 cssPosition:{
@@ -485,7 +529,7 @@ bottom:"-1",
 height:"30",
 left:"10",
 right:"-1",
-top:"290",
+top:"306",
 width:"145"
 },
 dataProviderID:"aplica_usa_escala",
@@ -499,7 +543,7 @@ typeid:47,
 uuid:"C981EB21-EBE5-4E23-833B-779D4D58FA88"
 },
 {
-cssPosition:"135,-1,-1,160,130,30",
+cssPosition:"151,-1,-1,160,130,30",
 formIndex:1,
 json:{
 cssPosition:{
@@ -507,7 +551,7 @@ bottom:"-1",
 height:"30",
 left:"160",
 right:"-1",
-top:"135",
+top:"151",
 width:"130"
 },
 dataProviderID:"aplica_resolucion",
@@ -542,7 +586,7 @@ typeid:47,
 uuid:"D2B32602-920B-439F-9389-6A8322D9276A"
 },
 {
-cssPosition:"290,-1,-1,160,656,30",
+cssPosition:"306,-1,-1,160,656,30",
 enabled:false,
 formIndex:18,
 json:{
@@ -551,7 +595,7 @@ bottom:"-1",
 height:"30",
 left:"160",
 right:"-1",
-top:"290",
+top:"306",
 width:"656"
 },
 dataProviderID:"escala_id",
@@ -565,7 +609,7 @@ typeid:47,
 uuid:"D6854CDC-5C4F-40BF-8F3F-8D6D59DB58B1"
 },
 {
-cssPosition:"135,-1,-1,10,145,30",
+cssPosition:"151,-1,-1,10,145,30",
 formIndex:2,
 json:{
 cssPosition:{
@@ -573,7 +617,7 @@ bottom:"-1",
 height:"30",
 left:"10",
 right:"-1",
-top:"135",
+top:"151",
 width:"145"
 },
 formIndex:2,
@@ -608,7 +652,7 @@ typeid:47,
 uuid:"D9E7E7FA-BB83-4A95-A304-8222F365558B"
 },
 {
-cssPosition:"215,-1,-1,609,76,30",
+cssPosition:"231,-1,-1,609,76,30",
 formIndex:1,
 json:{
 cssPosition:{
@@ -616,7 +660,7 @@ bottom:"-1",
 height:"30",
 left:"609",
 right:"-1",
-top:"215",
+top:"231",
 width:"76"
 },
 dataProviderID:"aplica_alicuota_noinsc",
@@ -632,7 +676,7 @@ typeid:47,
 uuid:"E06AAC52-0798-48E9-8A23-6659697855EB"
 },
 {
-cssPosition:"215,-1,-1,527,78,30",
+cssPosition:"231,-1,-1,527,78,30",
 formIndex:2,
 json:{
 cssPosition:{
@@ -640,7 +684,7 @@ bottom:"-1",
 height:"30",
 left:"527",
 right:"-1",
-top:"215",
+top:"231",
 width:"78"
 },
 formIndex:2,
@@ -654,7 +698,7 @@ typeid:47,
 uuid:"E6BD2EDB-4CFF-4FC3-9AE3-9D14A1BDB3B9"
 },
 {
-cssPosition:"180,-1,-1,10,145,30",
+cssPosition:"196,-1,-1,10,145,30",
 formIndex:2,
 json:{
 cssPosition:{
@@ -662,7 +706,7 @@ bottom:"-1",
 height:"30",
 left:"10",
 right:"-1",
-top:"180",
+top:"196",
 width:"145"
 },
 formIndex:2,
@@ -676,7 +720,7 @@ typeid:47,
 uuid:"E7E18548-F4A6-41C1-B257-BD39BF5561A1"
 },
 {
-cssPosition:"180,-1,-1,160,130,30",
+cssPosition:"196,-1,-1,160,130,30",
 formIndex:1,
 json:{
 cssPosition:{
@@ -684,7 +728,7 @@ bottom:"-1",
 height:"30",
 left:"160",
 right:"-1",
-top:"180",
+top:"196",
 width:"130"
 },
 dataProviderID:"aplica_vigencia",
@@ -700,7 +744,7 @@ typeid:47,
 uuid:"F0743441-3CDF-4B74-9D28-76DA348D3674"
 },
 {
-height:457,
+height:481,
 partType:5,
 typeid:19,
 uuid:"F1A099CA-F702-4C98-8B0A-5FBC3B5C687C"
@@ -710,6 +754,6 @@ name:"impuestos_lg_tipos_impuestos_aplicaciones",
 navigatorID:"-1",
 onShowMethodID:"3AD6E4D2-2784-4CD4-AD5E-E3E6CC9A9A6E",
 showInMenu:true,
-size:"827,424",
+size:"827,457",
 typeid:3,
 uuid:"94D0D361-9740-4878-A76F-6968A8070CC1"
