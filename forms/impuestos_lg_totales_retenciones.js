@@ -78,11 +78,14 @@ function Graficar()
 	var query_tipo = ''
 	query_tipo=' and a.tipo_imp_id = '+vl_tipo_imp_id
 
+	var tmp_fec_desde = scopes.globals.formatDate(vl_fec_desde)
+	var tmp_fec_hasta = scopes.globals.formatDate(vl_fec_hasta)
+	
 	var arg = new Array
-		arg.push(utils.dateFormat(vl_fec_desde,'YYYY-MM-dd')+' 00:00:00')
-		arg.push(utils.dateFormat(vl_fec_hasta,'YYYY-MM-dd')+' 23:59:59')
-		arg.push(utils.dateFormat(vl_fec_desde,'YYYY-MM-dd')+' 00:00:00')
-		arg.push(utils.dateFormat(vl_fec_hasta,'YYYY-MM-dd')+' 23:59:59')
+	arg.push(tmp_fec_desde+' 00:00:00')
+	arg.push(tmp_fec_hasta+' 23:59:59')
+	arg.push(tmp_fec_desde+' 00:00:00')
+	arg.push(tmp_fec_hasta+' 23:59:59')
 		
 	var query = new Array
 	var query1 = null
