@@ -232,19 +232,48 @@ function IVA_Ventas()
 {
 	var fs_vc_fact_enc = datasources.db.sistemas.vc_fact_enc.getFoundSet()
 	
+//	fs_vc_fact_enc.find()
+//	if(vl_mes!=null) fs_vc_fact_enc.facte_imputacion_mes=vl_mes
+//	if(vl_anio!=null) fs_vc_fact_enc.facte_imputacion_anio=vl_anio
+//	fs_vc_fact_enc.vc_fact_enc_to_lg_talonarios.talonario_libro_iva = 1
+//	if(fs_vc_fact_enc.search()>1)
+//	{
+//		vl_vc_tot_ex 			= fs_vc_fact_enc.aggr_total_ex
+//		vl_vc_tot_sb 			= fs_vc_fact_enc.aggr_total_sb
+//		vl_vc_tot_iva 			= fs_vc_fact_enc.aggr_total_iva
+//		vl_vc_tot_percep_ib 	= fs_vc_fact_enc.aggr_total_percep_ib
+//		vl_vc_tot_percep_iva 	= fs_vc_fact_enc.aggr_total_percep_iva
+//		vl_vc_tot_percep_varias = fs_vc_fact_enc.aggr_total_percep_varias
+//		vl_vc_tot_total 		= fs_vc_fact_enc.aggr_total
+//	}
+
+	vl_vc_tot_ex 			= 0
+	vl_vc_tot_sb 			= 0
+	vl_vc_tot_iva 			= 0
+	vl_vc_tot_percep_ib 	= 0
+	vl_vc_tot_percep_iva 	= 0
+	vl_vc_tot_percep_varias = 0
+	vl_vc_tot_total 		= 0
+	
 	fs_vc_fact_enc.find()
 	if(vl_mes!=null) fs_vc_fact_enc.facte_imputacion_mes=vl_mes
 	if(vl_anio!=null) fs_vc_fact_enc.facte_imputacion_anio=vl_anio
 	fs_vc_fact_enc.vc_fact_enc_to_lg_talonarios.talonario_libro_iva = 1
-	if(fs_vc_fact_enc.search()>1)
+	fs_vc_fact_enc.search()
+	
+	var tmp_cant = databaseManager.getFoundSetCount(fs_vc_fact_enc)
+	
+	for (var index = 1; index <= tmp_cant; index++) 
 	{
-		vl_vc_tot_ex 			= fs_vc_fact_enc.aggr_total_ex
-		vl_vc_tot_sb 			= fs_vc_fact_enc.aggr_total_sb
-		vl_vc_tot_iva 			= fs_vc_fact_enc.aggr_total_iva
-		vl_vc_tot_percep_ib 	= fs_vc_fact_enc.aggr_total_percep_ib
-		vl_vc_tot_percep_iva 	= fs_vc_fact_enc.aggr_total_percep_iva
-		vl_vc_tot_percep_varias = fs_vc_fact_enc.aggr_total_percep_varias
-		vl_vc_tot_total 		= fs_vc_fact_enc.aggr_total
+		var record = fs_vc_fact_enc.getRecord(index);
+		
+		vl_vc_tot_ex 			= vl_vc_tot_ex+record.facte_tot_ex*record.facte_cotizacion
+		vl_vc_tot_sb 			= vl_vc_tot_sb+record.facte_tot_sb*record.facte_cotizacion
+		vl_vc_tot_iva 			= vl_vc_tot_iva+record.facte_tot_iva*record.facte_cotizacion
+		vl_vc_tot_percep_ib 	= vl_vc_tot_percep_ib+record.facte_tot_percep_ib*record.facte_cotizacion
+		vl_vc_tot_percep_iva 	= vl_vc_tot_percep_iva+record.facte_tot_percep_iva*record.facte_cotizacion
+		vl_vc_tot_percep_varias = vl_vc_tot_percep_varias+record.facte_tot_percep_varias*record.facte_cotizacion
+		vl_vc_tot_total 		= vl_vc_tot_total+record.facte_tot_total*record.facte_cotizacion
 	}
 }
 

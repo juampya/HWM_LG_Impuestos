@@ -85,14 +85,14 @@ function Ventas()
 	var query1 = null
 	
 	query1 = "SELECT e.provincia_nombre, "+
-	 "SUM(a.facte_tot_ex) as tot_ex, "+
-	 "SUM(a.facte_tot_iva) as tot_iva, "+
-     "SUM(a.facte_tot_sb) as tot_sb, "+
-     "SUM(a.facte_tot_nogr) as tot_nogr, "+
-     "SUM(a.facte_tot_percep_ib) as tot_percep_ib, "+
-     "SUM(a.facte_tot_percep_iva) as tot_percep_iva, "+
-     "SUM(a.facte_tot_percep_varias) as tot_percep_varias, "+
-     "SUM(a.facte_tot_total) as tot_total "+
+	 "SUM(a.facte_tot_ex*a.facte_cotizacion) as tot_ex, "+
+	 "SUM(a.facte_tot_iva*a.facte_cotizacion) as tot_iva, "+
+     "SUM(a.facte_tot_sb*a.facte_cotizacion) as tot_sb, "+
+     "SUM(a.facte_tot_nogr*a.facte_cotizacion) as tot_nogr, "+
+     "SUM(a.facte_tot_percep_ib*a.facte_cotizacion) as tot_percep_ib, "+
+     "SUM(a.facte_tot_percep_iva*a.facte_cotizacion) as tot_percep_iva, "+
+     "SUM(a.facte_tot_percep_varias*a.facte_cotizacion) as tot_percep_varias, "+
+     "SUM(a.facte_tot_total*a.facte_cotizacion) as tot_total "+
 	 "FROM sistema.vc_fact_enc as a "+
 	 "left join sistema.lg_talonarios as b on a.talonario_id = b.talonario_id "+
 	 "left join sistema.vc_clientes as c on a.cliente_id = c.cliente_id "+

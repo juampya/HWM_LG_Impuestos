@@ -117,13 +117,13 @@ function Ventas()
 
 			if(record.facte_cliente_iva_id == rec_categorias.cativa_id)
 			{
-				rec_categorias.calc_total_ex	= rec_categorias.calc_total_ex + record.facte_tot_ex
-				rec_categorias.calc_total_iv 	= rec_categorias.calc_total_iv + record.facte_tot_iva
-				rec_categorias.calc_total_pib 	= rec_categorias.calc_total_pib+ record.facte_tot_percep_ib
-				rec_categorias.calc_total_piva 	= rec_categorias.calc_total_piva+ record.facte_tot_percep_iva
-				rec_categorias.calc_total_pvar 	= rec_categorias.calc_total_pvar+ record.facte_tot_percep_varias
-				rec_categorias.calc_total_sb 	= rec_categorias.calc_total_sb+ record.facte_tot_sb
-				rec_categorias.calc_total_to 	= rec_categorias.calc_total_to+ record.facte_tot_total
+				rec_categorias.calc_total_ex	= rec_categorias.calc_total_ex + (record.facte_tot_ex*record.facte_cotizacion)
+				rec_categorias.calc_total_iv 	= rec_categorias.calc_total_iv + (record.facte_tot_iva*record.facte_cotizacion)
+				rec_categorias.calc_total_pib 	= rec_categorias.calc_total_pib+ (record.facte_tot_percep_ib*record.facte_cotizacion)
+				rec_categorias.calc_total_piva 	= rec_categorias.calc_total_piva+ (record.facte_tot_percep_iva*record.facte_cotizacion)
+				rec_categorias.calc_total_pvar 	= rec_categorias.calc_total_pvar+ (record.facte_tot_percep_varias*record.facte_cotizacion)
+				rec_categorias.calc_total_sb 	= rec_categorias.calc_total_sb+ (record.facte_tot_sb*record.facte_cotizacion)
+				rec_categorias.calc_total_to 	= rec_categorias.calc_total_to+ (record.facte_tot_total*record.facte_cotizacion)
 			}
 		}
 	}

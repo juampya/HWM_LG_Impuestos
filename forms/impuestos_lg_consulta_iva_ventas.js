@@ -1,6 +1,55 @@
 /**
  * @type {Number}
  *
+ * @properties={typeid:35,uuid:"07E90E6C-1452-4CB9-BC29-19B9A96DF6DD",variableType:8}
+ */
+var vl_tot_per_varias = null;
+
+/**
+ * @type {Number}
+ *
+ * @properties={typeid:35,uuid:"EC1C9436-25AC-4FCE-86F2-7A26D1400A3B",variableType:8}
+ */
+var vl_tot_per_iva = null;
+
+/**
+ * @type {Number}
+ *
+ * @properties={typeid:35,uuid:"AD7642BA-153C-497B-8097-3F838E9A2A78",variableType:8}
+ */
+var vl_tot_per_ib = null;
+
+/**
+ * @type {Number}
+ *
+ * @properties={typeid:35,uuid:"DD16A26A-21E6-497C-BE21-C64709D59BD1",variableType:8}
+ */
+var vl_tot_iva = null;
+
+/**
+ * @type {Number}
+ *
+ * @properties={typeid:35,uuid:"103A02E8-9327-4FA7-ACD8-3EBDA673CE60",variableType:8}
+ */
+var vl_tot_ex = null;
+
+/**
+ * @type {Number}
+ *
+ * @properties={typeid:35,uuid:"DB76C639-44BA-421D-834C-453F996662D1",variableType:8}
+ */
+var vl_tot_sb = null;
+
+/**
+ * @type {Number}
+ *
+ * @properties={typeid:35,uuid:"D8009C20-BB82-4411-8B47-AEB24C4CFAA6",variableType:8}
+ */
+var vl_tot_to = null;
+
+/**
+ * @type {Number}
+ *
  * @properties={typeid:35,uuid:"4BC7656E-D020-4066-B644-95FDE198F955",variableType:4}
  */
 var vl_numero = null;
@@ -143,6 +192,8 @@ function ExportarResumida()
 			ds2.addColumn("Sucursal",19)
 			ds2.addColumn("AFIP",20)
 			ds2.addColumn("Modulo",21)
+			ds2.addColumn("Moneda",22)
+			ds2.addColumn("Cotización",23)
 			
 		for (var m = 0; m < tmp_array_nombre.length; m++) 
 		{
@@ -176,6 +227,8 @@ function ExportarResumida()
 			array_datos.push(application.getValueListDisplayValue('sucursal_empresa',record.suc_id))
 			array_datos.push(record.vc_fact_enc_to_lg_talonarios.talonario_afip)
 			array_datos.push('VENTAS')
+			array_datos.push(record.vc_fact_enc_to_lg_monedas.moneda_descripcion)
+			array_datos.push(utils.numberFormat(record.facte_cotizacion,'#,##0.00'))
 
 			ds2.addRow(array_datos)
 		}	
@@ -242,9 +295,19 @@ function onActionFiltrar() {
 	if(vl_ptovta!=null) facte_ptovta=vl_ptovta
 	if(vl_numero!=null) facte_numero=vl_numero
 	vc_fact_enc_to_lg_talonarios.talonario_libro_iva = 1
-	var tmp_cant = controller.search()
+	controller.search()
 
 	databaseManager.refreshRecordFromDatabase(foundset,-1)
+	
+	var tmp_cant=databaseManager.getFoundSetCount(foundset)
+	
+	vl_tot_to 		  = 0
+	vl_tot_sb 		  = 0
+	vl_tot_ex		  = 0
+	vl_tot_iva 		  = 0
+	vl_tot_per_ib 	  = 0
+	vl_tot_per_iva 	  = 0
+	vl_tot_per_varias = 0
 	
 	for (var i = 1; i <= tmp_cant; i++) 
 	{
@@ -254,6 +317,14 @@ function onActionFiltrar() {
 		{
 			vl_asientos.push(record.asiento_id)
 		}
+		
+		vl_tot_to  		  = vl_tot_to+record.facte_tot_total*record.facte_cotizacion
+		vl_tot_sb  		  = vl_tot_sb+record.facte_tot_sb*record.facte_cotizacion
+		vl_tot_ex  		  = vl_tot_sb+record.facte_tot_ex*record.facte_cotizacion
+		vl_tot_iva 		  = vl_tot_iva+record.facte_tot_iva*record.facte_cotizacion
+		vl_tot_per_ib 	  = vl_tot_per_ib+record.facte_tot_percep_ib*record.facte_cotizacion
+		vl_tot_per_iva    = vl_tot_per_iva+record.facte_tot_percep_iva*record.facte_cotizacion
+		vl_tot_per_varias = vl_tot_per_varias+record.facte_tot_percep_varias*record.facte_cotizacion
 	}
 	scopes.globals.CerrarPantallaWait()
 }
@@ -414,10 +485,21 @@ function onActionDescargar()
 //			}
 			
 			tmp_imp_impu = '000000000000000'
+			
 			tmp_moneda = 'PES'
 			
+			if(!scopes.globals.EMPTY(record.moneda_id))
+			{
+				tmp_moneda = record.vc_fact_enc_to_lg_monedas.moneda_afip
+			}
 			tmp_cotiza = '0001000000'
 			
+			if(!scopes.globals.EMPTY(record.moneda_id))
+			{
+				tmp_cotiza = utils.numberFormat(Math.abs(record.facte_cotizacion),'0000.000000') //'0001000000'
+				tmp_cotiza = tmp_cotiza.substr(0,4)+tmp_cotiza.substr(5,10)
+			}
+
 			tmp_OtrosTri = tmp_OtrosTri.substr(0,13)+tmp_OtrosTri.substr(14,15)
 			
 			tmp_fechavto = utils.numberFormat(record.facte_fecha_vto.getFullYear(),'0000')+utils.numberFormat(record.facte_fecha_vto.getMonth()+1,'00')+utils.numberFormat(record.facte_fecha_vto.getDate(),'00')
@@ -768,6 +850,8 @@ function ExportarDetallado()
 			ds2.addColumn("Cat.IVA",30)
 			ds2.addColumn("T.doc.",31)
 			ds2.addColumn("N° doc.",32)
+			ds2.addColumn("Moneda",33)
+			ds2.addColumn("Cotización",34)
 			
 		for (var m = 0; m < tmp_array_nombre.length; m++) 
 		{
@@ -938,6 +1022,8 @@ function ExportarDetallado()
 				array_datos.push(record.vc_fact_enc_to_lg_categorias_iva.cativa_abreviatura)
 				array_datos.push(record.vc_fact_enc_to_documentos.docu_codigo)
 				array_datos.push(record.facte_cliente_nro_doc)
+				array_datos.push(record.vc_fact_enc_to_lg_monedas.moneda_descripcion)
+				array_datos.push(utils.numberFormat(record.facte_cotizacion,'#,##0.00'))
 
 				ds2.addRow(array_datos)
 			}
@@ -1018,7 +1104,8 @@ function onCellDoubleClick(foundsetindex, columnindex, record, event)
 			if(!scopes.globals.EMPTY(asiento_id))
 			{	
 				forms.lg_frm_asiento.elements.lbl_titulo.text = "Asiento contable"
-				forms.lg_frm_asiento.vl_asiento_id=asiento_id
+				//forms.lg_frm_asiento.vl_asiento_id=asiento_id
+				forms.lg_frm_asiento.controller.loadRecords(asiento_id)
 				var w3 = application.createWindow("mydialog", JSWindow.MODAL_DIALOG);
 				w3.title=scopes.globals.vg_titulo_popup_dialog
 				forms.lg_frm_asiento.controller.show(w3);

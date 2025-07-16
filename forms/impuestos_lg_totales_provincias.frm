@@ -12,6 +12,7 @@ enableRowGroup:false,
 enableSort:false,
 enableToolPanel:false,
 headerTitle:"Provincia",
+styleClass:"table_field_noBorder_left",
 svyUUID:"67398534-5219-476C-AD58-F8FDAEE30C8D"
 },
 {

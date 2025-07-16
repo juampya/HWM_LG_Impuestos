@@ -77,6 +77,7 @@ enableRowGroup:false,
 enableSort:false,
 enableToolPanel:false,
 headerTitle:"Descripción",
+styleClass:"table_field_noBorder_left",
 svyUUID:"C395C252-3F47-4984-B0DB-875541A099D9"
 },
 {
