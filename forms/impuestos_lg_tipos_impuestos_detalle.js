@@ -258,13 +258,15 @@ function Valido()
 		return false
 	}
 	
-	if(scopes.globals.EMPTY(vl_cta_ctb))
-	{	
-		scopes.globals.VentanaGenerica(scopes.globals.mx_usuario_id,scopes.globals.vg_titulo_popup_dialog, 'La cuenta contable no puede estar vacía', 'warning',controller.getName(),null, null, null, null,null,null,null,null)
-		return false
+	if(!scopes.globals.ag_empresavigente.emp_usa_contabilidad)
+	{
+		if(scopes.globals.EMPTY(vl_cta_ctb))
+		{	
+			scopes.globals.VentanaGenerica(scopes.globals.mx_usuario_id,scopes.globals.vg_titulo_popup_dialog, 'La cuenta contable no puede estar vacía', 'warning',controller.getName(),null, null, null, null,null,null,null,null)
+			return false
+		}
 	}
-	
-	
+
 	if(!scopes.globals.EMPTY(vl_usa_escala))
 	{	
 		if(scopes.globals.EMPTY(vl_escala_id))

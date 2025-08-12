@@ -320,7 +320,7 @@ function onActionFiltrar() {
 		
 		vl_tot_to  		  = vl_tot_to+record.facte_tot_total*record.facte_cotizacion
 		vl_tot_sb  		  = vl_tot_sb+record.facte_tot_sb*record.facte_cotizacion
-		vl_tot_ex  		  = vl_tot_sb+record.facte_tot_ex*record.facte_cotizacion
+		vl_tot_ex  		  = vl_tot_ex+record.facte_tot_ex*record.facte_cotizacion
 		vl_tot_iva 		  = vl_tot_iva+record.facte_tot_iva*record.facte_cotizacion
 		vl_tot_per_ib 	  = vl_tot_per_ib+record.facte_tot_percep_ib*record.facte_cotizacion
 		vl_tot_per_iva    = vl_tot_per_iva+record.facte_tot_percep_iva*record.facte_cotizacion

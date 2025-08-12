@@ -104,7 +104,7 @@ function Ventas()
 			{
 				var rec_item = fs_facte_item.getRecord(k);
 				
-				rec_alicuotas.calc_total_iva = rec_alicuotas.calc_total_iva+(rec_item.facti_iva*record.facte_cotizacion)
+				rec_alicuotas.calc_total_iva = rec_alicuotas.calc_total_iva + (rec_item.facti_iva*record.facte_cotizacion)
 			}
 		}
 	}
